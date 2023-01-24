@@ -1,0 +1,19 @@
+package com;
+
+public class LockedMe {
+	public static void display() {
+		System.out.println("Press 1 to print all file in current list");
+		System.out.println("Press 2 for file operation");
+		System.out.println("Press 3 to logout");
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}
+
+
+

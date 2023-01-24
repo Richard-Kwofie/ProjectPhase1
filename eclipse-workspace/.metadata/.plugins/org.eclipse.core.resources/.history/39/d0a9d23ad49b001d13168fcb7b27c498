@@ -1,0 +1,19 @@
+package com;
+
+public class FileOperations {
+
+	
+	public static void fileOperationsPrompt() {
+		
+		System.out.println("Press 1 to Add a file");
+		System.out.println("Press 2 to Delete a file");
+		System.out.println("Press 3 to Search for a file");
+		System.out.println("Press 4 to go back to main menu");
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

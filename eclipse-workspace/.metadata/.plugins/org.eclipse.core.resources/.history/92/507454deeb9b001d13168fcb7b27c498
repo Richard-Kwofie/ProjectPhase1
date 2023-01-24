@@ -1,0 +1,72 @@
+package com;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileOperations {
+
+	
+	public static void fileOperationsPrompt() {
+
+			
+		int fileOperationChoice;
+		
+		Label_entry:
+		while(true) {
+			System.out.println("Press 1 to Add a file");
+			System.out.println("Press 2 to Delete a file");
+			System.out.println("Press 3 to Search for a file");
+			System.out.println("Press 4 to go back to main menu");
+			
+			fileOperationChoice = LockedMe.sc.nextInt();
+			
+			switch(fileOperationChoice) {
+			
+				case 1:
+					   System.out.println("Enter the file name");
+					   String filename = LockedMe.sc.next();
+					try {
+						      File myObj = new File(filename);
+						      if (myObj.createNewFile()) {
+						        System.out.println("File created: " + myObj.getName());
+						      } else {
+						        System.out.println("File already exists.");
+						      }
+						    } catch (IOException e) {
+						      System.out.println("An error occurred.");
+						      e.printStackTrace();
+						    }
+					break;
+					
+				case 2:
+					System.out.println("Deleting file");
+					break;
+					
+				case 3:
+					System.out.println("Searching file");
+					break;
+				
+				case 4:
+					System.out.println("Going out of sub menu file");
+					break Label_entry;
+					
+				default:
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					break;
+			
+			}
+			
+		
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}

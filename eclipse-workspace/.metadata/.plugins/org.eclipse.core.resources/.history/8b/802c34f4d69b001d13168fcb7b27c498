@@ -1,0 +1,55 @@
+package com;
+
+public class FileOperations {
+
+	
+	public static void fileOperationsPrompt() {
+
+			
+		int fileOperationChoice;
+		while(true) {
+			System.out.println("Press 1 to Add a file");
+			System.out.println("Press 2 to Delete a file");
+			System.out.println("Press 3 to Search for a file");
+			System.out.println("Press 4 to go back to main menu");
+			
+			fileOperationChoice = LockedMe.sc.nextInt();
+			
+			switch(fileOperationChoice) {
+			
+				case 1:
+					System.out.println("Creating file");
+					break;
+					
+				case 2:
+					System.out.println("Deleting file");
+					break;
+					
+				case 3:
+					System.out.println("Searching file");
+					break;
+				
+				case 4:
+					System.out.println("Going out of sub menu file");
+					continue;
+					
+				default:
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					System.out.println("");
+					continue;
+			
+			}
+			
+		
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+
+}

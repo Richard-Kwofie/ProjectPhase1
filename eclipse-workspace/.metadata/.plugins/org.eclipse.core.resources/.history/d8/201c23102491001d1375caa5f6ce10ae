@@ -1,0 +1,63 @@
+package com.vodafone;
+
+public class w3practise {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		System.out.println(9/2);
+		
+//		String name = "adwoa";
+	//	System.out.println(name);
+		
+	//	int value = 4;
+//		System.out.println(value);
+		
+		//final int value = 2;
+	//	System.out.println(value);
+		
+	//	boolean ama = true;
+	//	System.out.println(ama);
+	//			float aba = 45.5f; 
+		//System.out.println(aba);
+		
+	//	String name = "AZA";
+		//System.out.println("Hello" + name);
+		
+	//	String firstname = "John";
+	//	String surname = "Ama";
+	//	String Fullname = firstname + surname;
+	//	System.out.println(Fullname);
+		
+		
+	//	int x = 2;
+	//	int y = 4;
+	//	int z = 9
+	//			;
+	//	int a = x + y + z;
+	//	System.out.println(a);
+		
+	//	long myNum = 100000000;
+	//	System.out.println(myNum);
+		
+	//	boolean ismyhairblack = true;
+	//	boolean callme = false;
+	//	System.out.println(ismyhairblack);
+	//	System.out.println(callme);
+		
+	//	char myscore = 'a';
+	//	System.out.println(myscore);
+		
+	//	int x = 100;
+	//	int y = 5;
+	//	System.out.println(x > y);
+		
+		
+		String myword = "i am coming home";
+		System.out.println(myword.toUpperCase());
+		System.out.println(myword.toLowerCase());
+		
+				
+
+	}
+
+}
