@@ -16,7 +16,8 @@ public class LockedMe {
 	public static void main(String[] args) {
 		System.out.println("Kwofie Ecosystem");
 		System.out.println("Richard Kwofie, Vodafone Ghana");
-
+//		@SuppressWarnings("resource")
+//		Scanner sc = new Scanner(System.in);
 		
 		File[] fileList;
 	   Label_main_menu:
