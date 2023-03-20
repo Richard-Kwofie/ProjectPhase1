@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name="teachertable")
 public class Teacher {
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.AUTO)
 	
 	private int TeacherID;
 	private String TeacherName;

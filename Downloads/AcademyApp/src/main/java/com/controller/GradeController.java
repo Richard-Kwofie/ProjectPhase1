@@ -2,6 +2,7 @@ package com.controller;
 
 import java.io.IOException;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,14 +69,14 @@ public class GradeController extends HttpServlet {
     		
     		response.setContentType("text/html");
     		
-    		int GradeID = Integer.parseInt(request.getParameter("GradeID"));
+ //   		int GradeID = Integer.parseInt(request.getParameter("GradeID"));
     		String Section = request.getParameter("Section");
     		
     		Grade g = new Grade();
-    		g.setGradeID(GradeID);
+ //   		g.setGradeID(GradeID);
     		g.setSection(Section);
     		
-    		
+    		System.out.println("grade is " + g);
     		GradeService gs = new GradeService();
     		String result = gs.addGrade(g);
     		

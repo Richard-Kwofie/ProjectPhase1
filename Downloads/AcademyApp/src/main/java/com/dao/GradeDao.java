@@ -1,6 +1,7 @@
 package com.dao;
 
 import javax.persistence.TypedQuery;
+
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,7 +14,7 @@ public class GradeDao {
 	
 	public int addGrade(Grade grade) {
 		SessionFactory sf = DbResource.getSessionFactory();
-		Session session = sf.getCurrentSession();
+		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
 		tran.begin();
 		   session.save(grade);

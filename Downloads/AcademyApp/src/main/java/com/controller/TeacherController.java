@@ -69,11 +69,11 @@ public class TeacherController extends HttpServlet {
   		
   		response.setContentType("text/html");
   		
-  		int TeacherID = Integer.parseInt(request.getParameter("TeacherID"));
+//  		int TeacherID = Integer.parseInt(request.getParameter("TeacherID"));
   		String TeacherName = request.getParameter("TeacherName");
   		
   		Teacher t = new Teacher();
-  		t.setTeacherID(TeacherID);
+//  		t.setTeacherID(TeacherID);
   		t.setTeacherName(TeacherName);
   		
   		

@@ -73,11 +73,11 @@ public class SubjectController extends HttpServlet {
   		
   		response.setContentType("text/html");
   		
-  		int SubjectID = Integer.parseInt(request.getParameter("SubjectID"));
+ // 		int SubjectID = Integer.parseInt(request.getParameter("SubjectID"));
   		String SubjectName = request.getParameter("SubjectName");
   		
   		Subject j = new Subject();
-  		j.setSubjectID(SubjectID);
+//  		j.setSubjectID(SubjectID);
   		j.setSubjectName(SubjectName);
   		
   		

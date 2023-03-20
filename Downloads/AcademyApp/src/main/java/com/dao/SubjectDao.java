@@ -14,7 +14,7 @@ public class SubjectDao {
 	
 	public int addSubject(Subject subject) {
 		SessionFactory sf = DbResource.getSessionFactory();
-		Session session = sf.getCurrentSession();
+		Session session = sf.openSession();
 		Transaction tran = session.getTransaction();
 		tran.begin();
 		   session.save(subject);

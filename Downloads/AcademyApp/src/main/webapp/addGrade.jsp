@@ -9,8 +9,6 @@
 <body>
 <h2>Add Grade</h2>
 <form action="GradeController" method="post">
-    <label>GradeID</label>
-    <input type="number" name="GradeID"><br/>
     <label>Section</label>
     <input type="number" name="Section"><br/>
     <input type="submit" value="Add Grade">

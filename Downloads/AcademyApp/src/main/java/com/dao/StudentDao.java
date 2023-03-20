@@ -15,7 +15,7 @@ public class StudentDao {
 
 public int addStudent(Student student) {
 	SessionFactory sf = DbResource.getSessionFactory();
-	Session session = sf.getCurrentSession();
+	Session session = sf.openSession();
 	Transaction tran = session.getTransaction();
 	tran.begin();
 	   session.save(student);

@@ -9,8 +9,12 @@
 <body>
 <h2>Add Subject</h2>
 <form action="SubjectController" method="post">
-    <label>SubjectID</label>
+   
+   <!-- 
+       <label>SubjectID</label>
     <input type="number" name="SubjectID"><br/>
+   
+    -->
     <label>SubjectName</label>
     <input type="text" name="SubjectName"><br/>
     

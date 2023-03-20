@@ -9,8 +9,11 @@
 <body>
 <h2>Add Student</h2>
 <form action="StudentController" method="post">
-    <label>StudentID</label>
-    <input type="number" name="StudentID"><br/>
+ <!-- 
+      <label>StudentID</label>
+      <input type="number" name="StudentID"><br/>
+  --> 
+    
     <label>StudentName</label>
     <input type="text" name="StudentName"><br/>
     

@@ -9,8 +9,13 @@
 <body>
 <h2>Add Teacher</h2>
 <form action="TeacherController" method="post">
-    <label>TeacherID</label>
+   
+   <!-- 
+   
+     <label>TeacherID</label>
     <input type="number" name="TeacherID"><br/>
+   
+    -->
     <label>TeacherName</label>
     <input type="text" name="TeacherName"><br/>
     <input type="submit" value="Add Teacher">

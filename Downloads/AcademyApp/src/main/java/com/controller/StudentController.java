@@ -68,11 +68,11 @@ public class StudentController extends HttpServlet {
     		
     		response.setContentType("text/html");
     		
-    		int StudentID = Integer.parseInt(request.getParameter("StudentID"));
+ //   		int StudentID = Integer.parseInt(request.getParameter("StudentID"));
     		String StudentName = request.getParameter("StudentName");
     		
     		Student s = new Student();
-    		s.setStudentID(StudentID);
+//    		s.setStudentID(StudentID);
     		s.setStudentName(StudentName);
     		
     		

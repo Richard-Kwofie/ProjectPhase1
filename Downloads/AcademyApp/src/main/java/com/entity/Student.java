@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 public class Student {
 
 @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+@GeneratedValue(strategy = GenerationType.AUTO)
 	private int StudentID;
 	private String StudentName;
 	
