@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +59,13 @@ public class LoginController {
 
 		return "index";
 
+	}
+	
+	@RequestMapping(value = "/viewLoginPage",method = RequestMethod.GET)
+	public String viewLogin(Model mm, Login ll) {
+		List<Login> listofLogins = loginService.findAllLogin();
+		mm.addAttribute("login", listofLogins);
+		return "viewLogin";
 	}
 
 }
