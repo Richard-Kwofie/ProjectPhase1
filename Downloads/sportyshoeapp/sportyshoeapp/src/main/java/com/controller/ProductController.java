@@ -60,4 +60,11 @@ public class ProductController {
 		return "viewProductsByCustomer";
 	}
 
+	@RequestMapping(value = "/viewProductDetailsByAdmin",method = RequestMethod.GET)
+	public String viewAdminProduct(Model mm, Product pp) {
+		List<Product> listOfProducts = productService.findAllProduts();
+		mm.addAttribute("products", listOfProducts);
+		
+		return "viewProductsByAdmin";
+}
 }
