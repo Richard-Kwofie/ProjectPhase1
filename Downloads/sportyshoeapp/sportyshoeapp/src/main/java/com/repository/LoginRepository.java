@@ -1,5 +1,7 @@
 package com.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -21,5 +23,8 @@ public interface LoginRepository extends JpaRepository<Login, String>{
 	public Login signInWithNative(@Param("emailid") String emailid, 
 			@Param("password") String password, 
 			@Param("typeofuser") String typeofuser);
+	
+	
+	   List<Login> findByEmailidContainingIgnoreCase(String emailid);
 
 }

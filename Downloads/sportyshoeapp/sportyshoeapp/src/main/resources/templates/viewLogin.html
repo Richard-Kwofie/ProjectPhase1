@@ -6,6 +6,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<div>
+<form th:action="@{/viewLoginPage}">
+<input name="keyword" th:value="${keyword}" placeholder="Enter keyword" method="post"/>
+<button type="submit">Search</button>
+</form>
+
+</div>
+
 <table border="1">
 	<tr>
 		<th>EmailId</th>

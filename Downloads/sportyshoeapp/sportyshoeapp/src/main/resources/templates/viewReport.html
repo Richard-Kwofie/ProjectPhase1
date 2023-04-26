@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/viewReportPage" method="get">
+
+    <label for="start-date">Start Date:</label>
+    <input type="date" name="start" id="start-date">
+    <label for="end-date">End Date:</label>
+    <input type="date" name="end" id="end-date">
+    <button type="submit">Filter</button>
+</form>
+
+<table border="1">
+	<tr>
+	    <th>OrderId</th>
+		<th>EmailId</th>
+		<th>OrderPlaced</th>	
+		<th>ProductId</th>
+		
+	</tr>
+	
+	<tr th:each="os:${orders}">
+		<td th:text="${os.orderid}"></td>
+		<td th:text="${os.emailid}"></td>
+		<td th:text="${os.orderplaced}"></td>
+		<td th:text="${os.productid}"></td>
+	</tr>
+</table>
+<br/>
+<a th:href="@{/adminHome}">Back</a>
+</body>
+</html>

@@ -5,12 +5,14 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bean.Login;
+import com.repository.LoginRepository;
 import com.service.LoginService;
 
 @Controller
@@ -19,6 +21,7 @@ public class LoginController {
 	@Autowired
 	LoginService loginService;
 	
+	@Autowired LoginRepository loginRepository;
 	
 	@RequestMapping(value = "/",method = RequestMethod.GET)
 	public String open(Model mm, Login ll) {
@@ -61,10 +64,25 @@ public class LoginController {
 
 	}
 	
+//	@RequestMapping(value = "/viewLoginPage",method = RequestMethod.GET)
+//	public String viewLogin(Model mm, Login ll) {
+//		List<Login> listofLogins = loginService.findAllLogin();
+//		mm.addAttribute("login", listofLogins);
+//		return "viewLogin";
+	
 	@RequestMapping(value = "/viewLoginPage",method = RequestMethod.GET)
-	public String viewLogin(Model mm, Login ll) {
-		List<Login> listofLogins = loginService.findAllLogin();
-		mm.addAttribute("login", listofLogins);
+	public String viewLogin(Model mm, @Param("keyword") String keyword, Login ll) {
+	
+			 if(keyword == null)
+				 {
+				 
+				 List<Login> listofLogins = loginService.findAllLogin();
+				 mm.addAttribute("login", listofLogins);
+				 } else {List<Login> listofLogins = loginRepository.findByEmailidContainingIgnoreCase(keyword);
+				          mm.addAttribute("keyword", keyword);
+				          mm.addAttribute("login", listofLogins);
+				 }
+		
 		return "viewLogin";
 	}
 
